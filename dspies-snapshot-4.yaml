@@ -1,0 +1,30 @@
+resolver: lts-13.6
+
+name: dspies-snapshot-4
+
+packages:
+- git: https://github.com/davidspies/dspies-prelude.git
+  commit: 37d954dfc91d5a621841c60bd0ceee761642a268
+- git: https://github.com/haskell/haskell-ide-engine.git
+  commit: 239d07da8a3a7f80a4f0acef287256aae4cc2361
+  subdirs:
+  - .
+  - hie-plugin-api
+  - submodules/HaRe
+  - submodules/brittany
+  - submodules/cabal-helper
+  - submodules/ghc-mod
+  - submodules/ghc-mod/core
+- butcher-1.3.2.1
+- cabal-plan-0.4.0.0
+- constrained-dynamic-0.1.0.0
+- haddock-api-2.21.0
+- haskell-src-exts-1.21.0
+- hlint-2.1.14
+- hoogle-5.0.17.5
+- hsimport-0.8.8
+- monad-memo-0.4.1
+- multistate-0.8.0.1
+- syz-0.2.0.0
+- temporary-1.2.1.1
+- yaml-0.8.32
