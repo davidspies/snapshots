@@ -9,7 +9,7 @@ tmpl_url = (
     )
 resolver = (
     'https://raw.githubusercontent.com/davidspies/snapshots/master/' +
-    'dspies-snapshot-8.yaml'
+    'dspies-snapshot-9.yaml'
     )
 
 def main(loc, *args):
