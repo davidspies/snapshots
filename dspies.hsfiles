@@ -116,8 +116,9 @@ spec_foo = describe "Foo" $ it "should bar" $ (2 :: Integer) `shouldBe` 2
 
 {-# START_FILE src/Lib.hs #-}
 module Lib
-    ( someFunc
-    ) where
+  ( someFunc
+  )
+where
 
 import           DSpies.Prelude
 
