@@ -1,105 +1,104 @@
 {-# START_FILE package.yaml #-}
-name:                {{name}}
-version:             0.1.0.0
-github:              "{{github-username}}{{^github-username}}githubuser{{/github-username}}/{{name}}"
-license:             BSD3
-author:              "{{author-name}}{{^author-name}}Author name here{{/author-name}}"
-maintainer:          "{{author-email}}{{^author-email}}example@example.com{{/author-email}}"
-copyright:           "{{copyright}}{{^copyright}}{{year}}{{^year}}2019{{/year}} {{author-name}}{{^author-name}}Author name here{{/author-name}}{{/copyright}}"
+name: {{name}}
+version: 0.1.0.0
+github: "{{github-username}}{{^github-username}}githubuser{{/github-username}}/{{name}}"
+license: BSD3
+author: "{{author-name}}{{^author-name}}Author name here{{/author-name}}"
+maintainer: "{{author-email}}{{^author-email}}example@example.com{{/author-email}}"
+copyright: "{{copyright}}{{^copyright}}{{year}}{{^year}}2019{{/year}} {{author-name}}{{^author-name}}Author name here{{/author-name}}{{/copyright}}"
 
 extra-source-files:
-- README.md
-- ChangeLog.md
+  - README.md
+  - ChangeLog.md
 
 # Metadata used when publishing your package
 # synopsis:            Short description of your package
 # category: {{category}}{{^category}}Web{{/category}}
 
-
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
 # common to point users to the README.md file.
-description:         Please see the README on GitHub at <https://github.com/{{github-username}}{{^github-username}}githubuser{{/github-username}}/{{name}}#readme>
+description: Please see the README on GitHub at <https://github.com/{{github-username}}{{^github-username}}githubuser{{/github-username}}/{{name}}#readme>
 
 dependencies:
-- base >= 4.7 && < 5
-- dspies-prelude
+  - base >= 4.7 && < 5
+  - dspies-prelude
 
 ghc-options:
-- -Werror
-- -Weverything
-- -Wno-missing-import-lists
-- -Wno-safe
+  - -Werror
+  - -Weverything
+  - -Wno-missing-import-lists
+  - -Wno-safe
 
 default-extensions:
-- BangPatterns
-- ConstraintKinds
-- DataKinds
-- DeriveFoldable
-- DeriveFunctor
-- DeriveGeneric
-- DeriveLift
-- DeriveTraversable
-- DerivingStrategies
-- DerivingVia
-- EmptyCase
-- ExistentialQuantification
-- FlexibleContexts
-- FlexibleInstances
-- FunctionalDependencies
-- GADTs
-- InstanceSigs
-- KindSignatures
-- LambdaCase
-- MultiParamTypeClasses
-- MultiWayIf
-- NamedFieldPuns
-- NoImplicitPrelude
-- OverloadedStrings
-- QuantifiedConstraints
-- RankNTypes
-- RecordWildCards
-- ScopedTypeVariables
-- StandaloneDeriving
-- TupleSections
-- TypeApplications
-- TypeFamilyDependencies
-- TypeFamilies
-- TypeOperators
-- TypeSynonymInstances
-- ViewPatterns
+  - BangPatterns
+  - ConstraintKinds
+  - DataKinds
+  - DeriveFoldable
+  - DeriveFunctor
+  - DeriveGeneric
+  - DeriveLift
+  - DeriveTraversable
+  - DerivingStrategies
+  - DerivingVia
+  - EmptyCase
+  - ExistentialQuantification
+  - FlexibleContexts
+  - FlexibleInstances
+  - FunctionalDependencies
+  - GADTs
+  - InstanceSigs
+  - KindSignatures
+  - LambdaCase
+  - MultiParamTypeClasses
+  - MultiWayIf
+  - NamedFieldPuns
+  - NoImplicitPrelude
+  - OverloadedStrings
+  - QuantifiedConstraints
+  - RankNTypes
+  - RecordWildCards
+  - ScopedTypeVariables
+  - StandaloneDeriving
+  - TupleSections
+  - TypeApplications
+  - TypeFamilyDependencies
+  - TypeFamilies
+  - TypeOperators
+  - TypeSynonymInstances
+  - ViewPatterns
 
 library:
   source-dirs: src
 
 executables:
   {{name}}-exe:
-    main:                Main.hs
-    source-dirs:         app
+    main: Main.hs
+    source-dirs: app
     ghc-options:
-    - -Wno-missing-export-lists
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
+      - -Wno-missing-export-lists
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
     dependencies:
-    - {{name}}
+      - {{name}}
 
 tests:
   {{name}}-test:
-    main:                Tasty.hs
-    source-dirs:         test
+    main: Tasty.hs
+    source-dirs: test
     ghc-options:
-    - -Wno-missing-export-lists
-    - -Wno-unsafe
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
+      - -Wno-missing-export-lists
+      - -Wno-unsafe
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
     dependencies:
-    - {{name}}
-    - hspec
-    - tasty
-    - tasty-discover
-    - tasty-hspec
+      - {{name}}
+      - hspec
+      - tasty
+      - tasty-discover
+      - tasty-hspec
 
 {-# START_FILE Setup.hs #-}
 import Distribution.Simple
