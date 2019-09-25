@@ -27,7 +27,9 @@ dependencies:
 
 ghc-options:
 - -Werror
-- -Wall
+- -Weverything
+- -Wno-missing-import-lists
+- -Wno-safe
 
 default-extensions:
 - BangPatterns
@@ -46,7 +48,6 @@ default-extensions:
 - FlexibleInstances
 - FunctionalDependencies
 - GADTs
-- GeneralizedNewtypeDeriving
 - InstanceSigs
 - KindSignatures
 - LambdaCase
