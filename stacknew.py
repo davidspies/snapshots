@@ -6,15 +6,19 @@ import sys
 tmpl_url = (
     "https://raw.githubusercontent.com/davidspies/snapshots/master/"
     + "dspies.hsfiles"
-    )
+)
 resolver = (
-    'https://raw.githubusercontent.com/davidspies/snapshots/master/' +
-    'dspies-snapshot-14.yaml'
-    )
+    "https://raw.githubusercontent.com/davidspies/snapshots/master/"
+    + "dspies-snapshot-15.yaml"
+)
+
 
 def main(loc, *args):
-    os.execvp("stack", ("stack", "new", loc, tmpl_url, '--resolver=' + resolver) + args)
+    os.execvp(
+        "stack",
+        ("stack", "new", loc, tmpl_url, "--resolver=" + resolver) + args,
+    )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main(*sys.argv[1:])
