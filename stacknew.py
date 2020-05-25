@@ -9,7 +9,7 @@ tmpl_url = (
 )
 resolver = (
     "https://raw.githubusercontent.com/davidspies/snapshots/master/"
-    + "dspies-snapshot-15.yaml"
+    + "dspies-snapshot-16.yaml"
 )
 
 
