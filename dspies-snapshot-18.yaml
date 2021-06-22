@@ -1,0 +1,7 @@
+resolver: lts-17.12
+
+name: dspies-snapshot-18
+
+packages:
+- git: https://github.com/davidspies/dspies-prelude.git
+  commit: 99d5dec54d3525b83eb510b4d8ba49713a7b33d9
